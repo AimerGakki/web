@@ -35,6 +35,8 @@
 
     删除分支：git branch -d <name>
     
+    删除github 上的分支dev： git push remote-name :dev   (原理：推送空分支到远程分支dev,相当删除远程分支dev)
+    
   # 远程仓库的使用
  
  1. 查看当前远程仓库
