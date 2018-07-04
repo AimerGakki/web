@@ -130,21 +130,27 @@
 **6.如何将字符串转化为数字，例如'12.3b'?**
 1. Number()
 	
-		当 Number() 和运算符 new 一起作为构造函数使用时，它返回一个新创建的 Number 对象。如果不用 new 运算符，把 Number() 作为一个函		数来调用，它将把自己的参数转换成一个原始的数值，并且返回这个值（如果转换失败，则返回 NaN）。
+		当 Number() 和运算符 new 一起作为构造函数使用时，它返回一个新创建的 Number 对象。如果不用 new 运算符，把Number()作为一个函数来调用，它将把自己的参数转换成一个原始的数值，并且返回这个值（如果转换失败，则返回 NaN）。
 		var test1= new Boolean(true);
      		var test2= new Boolean(false);
      		var test3= new Date();
      		var test4= new String("999");
      		var test5= new String("999 888");
-     		document.write(Number(test1)+ "<br />");
-    		document.write(Number(test2)+ "<br />");
-    		 document.write(Number(test3)+ "<br />");
-    		 document.write(Number(test4)+ "<br />");
-    	 	document.write(Number(test5)+ "<br />");
-1. parseFloat()
-
-		parseFloat('12.3b');
+     		document.write(Number(test1)+ "<br />");//1
+    		document.write(Number(test2)+ "<br />");//0
+    		 document.write(Number(test3)+ "<br />");//时间秒数
+    		 document.write(Number(test4)+ "<br />");//999
+    	 	document.write(Number(test5)+ "<br />");//NaN
 1. parseInt()
+		
+		parseInt() 函数可解析一个字符串，并返回一个整数。
+		parseInt(string,radix)
+		string	必需。要被解析的字符串。
+		radix	可选。表示要解析的数字的基数。该值介于 2 ~ 36 之间。如果省略该参数或其值为 0，则数字将以 10 为基础来解析。如果它以 “0x” 或 “0X” 开头，将以 16 为基数。如果该参数小于 2 或者大于 36，则 parseInt() 将返回 NaN。
+	
+1. parseFloat()
+		
+		parseFloat('12.3b');
 	
 **7.如何将浮点数点左边的数每三位添加一个逗号，如12000000.11转化为『12,000,000.11』?**
 
