@@ -5,4 +5,4 @@
   
 ## Catalog
 
-[javascript](https://yaojiafeng.com)
+[javascript](https://github.com/yaojiafeng/web/blob/dev/JavaScript/javascript.md)
